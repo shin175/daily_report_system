@@ -17,9 +17,7 @@ public class ReportConverter {
      * @return Reportのインスタンス
      */
     public static Report toModel(ReportView rv) {
-        return new Report(
-                rv.getId(),
-                EmployeeConverter.toModel(rv.getEmployee()),
+        return new Report(rv.getId(), EmployeeConverter.toModel(rv.getEmployee()),
                 rv.getReportDate(),
                 rv.getTitle(),
                 rv.getContent(),
